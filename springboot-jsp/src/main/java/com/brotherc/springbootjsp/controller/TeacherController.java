@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/teacher")
 public class TeacherController {
 
+    @RequestMapping("/list")
+    private String list() {
+        return "list";
+    }
 }
