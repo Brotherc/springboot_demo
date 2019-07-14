@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+name: brotherc
+age: 18
+content: "name: ${name}, age: ${age}"
+
+person:
+  name: brotherc
+  age: 18
+
