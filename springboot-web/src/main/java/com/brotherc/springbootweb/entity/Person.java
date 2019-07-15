@@ -18,4 +18,7 @@ public class Person {
     private String name;
     @JSONField(format = "yyyy-MM-dd HH:mm")
     private Date createTime;
+
+    @JSONField(serialize = false)
+    private String remark;
 }
