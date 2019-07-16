@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.brotherc.springbootmybatis2.mapper.CatMapper" >
+    <select id="findByCatName" resultType="com.brotherc.springbootmybatis2.entity.Cat" parameterType="string">
+        select * from cat where cat_name = #{catName,jdbcType=VARCHAR}
+    </select>
+</mapper>
