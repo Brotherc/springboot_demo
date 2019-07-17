@@ -1,0 +1,28 @@
+# Mysql 1
+mysql:
+  datasource:
+    test1:
+      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: Rdis2fun
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      testQuery: select 1
+# Mysql 2
+    test2:
+      url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: Rdis2fun
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      testQuery: select 1
