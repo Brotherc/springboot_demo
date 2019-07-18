@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+
+# \u5E94\u7528\u81EA\u5B9A\u4E49\u914D\u7F6E
+#logging:
+#  config: classpath:logback-brotherc.xml
+
+---
+spring:
+  profiles: test
