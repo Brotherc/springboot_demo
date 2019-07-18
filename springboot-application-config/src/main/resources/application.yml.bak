@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+name: brotherc
+age: 18
+
+content: "name: ${name}, age: ${age}"
+
+person:
+  name: brotherc
+  age: 18
+
+---
+spring:
+  profiles: dev
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles: prod
+
+server:
+  port: 8082

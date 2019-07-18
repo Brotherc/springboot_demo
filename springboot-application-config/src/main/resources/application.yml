@@ -10,3 +10,7 @@ content: "name: ${name}, age: ${age}"
 person:
   name: brotherc
   age: 18
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
