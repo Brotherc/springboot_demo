@@ -5,6 +5,7 @@
     <title></title>
 </head>
 <body>
+<img src="/img/a.jpg" />
 欢迎${name}
 	  <#if age <= 17>小哥
       <#elseif age <= 30>先生
