@@ -1,1 +1,25 @@
+spring:
+  profiles:
+    active: dev
 
+# \u5E94\u7528\u81EA\u5B9A\u4E49\u914D\u7F6E
+#logging:
+#  config: classpath:log4j2-dev.xml
+---
+spring:
+  profiles: dev
+# \u5E94\u7528\u81EA\u5B9A\u4E49\u914D\u7F6E
+logging:
+  config: classpath:log4j2-dev.xml
+---
+spring:
+  profiles: test
+# \u5E94\u7528\u81EA\u5B9A\u4E49\u914D\u7F6E
+logging:
+  config: classpath:log4j2-test.xml
+---
+spring:
+  profiles: prod
+# \u5E94\u7528\u81EA\u5B9A\u4E49\u914D\u7F6E
+logging:
+  config: classpath:log4j2-prod.xml
