@@ -1,7 +1,9 @@
 package com.brotherc.springbootredis.service;
 
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.brotherc.springbootredis.component.RedisComponent;
 
 /**
  * @author: Brotherc
@@ -10,8 +12,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    @Cacheable(value = "users")
-    public void getUser() {
-        System.out.println("set cache");
+    @Autowired
+    private RedisComponent redisComponent;
+
+    public void set() {
+        redisComponent.set("user", "brotherc");
+    }
+
+    public void get() {
+        System.out.println(redisComponent.get("user"));
+    }
+
+    public void del() {
+        redisComponent.del("user");
     }
 }

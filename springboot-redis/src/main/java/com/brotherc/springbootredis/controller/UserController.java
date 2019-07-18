@@ -1,7 +1,9 @@
 package com.brotherc.springbootredis.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.brotherc.springbootredis.service.UserService;
@@ -16,8 +18,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("user")
-    public String getUser() {
-        return "success";
+    @GetMapping("user")
+    public void getUser() {
+        userService.get();
+    }
+
+    @PostMapping("user")
+    public void setUser() {
+        userService.set();
+    }
+
+    @DeleteMapping("user")
+    public void delUser() {
+        userService.del();
     }
 }
