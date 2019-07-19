@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/test
+      port: 27017
+
+# MONGODB (MongoProperties)
+#spring.data.mongodb.authentication-database=
+#spring.data.mongodb.database=test
+#spring.data.mongodb.field-naming-strategy=
+#spring.data.mongodb.grid-fs-database=
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.password=
+#spring.data.mongodb.repositories.enabled=true
+#spring.data.mongodb.username=
