@@ -1,0 +1,9 @@
+spring:
+  h2:
+    console:
+      path: /h2
+  datasource:
+    url: jdbc:h2:file:F:/projectRepository/brotherc-springboot/springboot-h2/src/main/spring_boot
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver
