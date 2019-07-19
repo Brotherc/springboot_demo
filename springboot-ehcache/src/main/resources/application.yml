@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=UTC
+    username: root
+    password: Rdis2fun
+    max-active: 20
+    max-idle: 8
+    min-idle: 8
+    initial-size: 10
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  cache:
+    ehcache:
+      config: classpath:config/ehcache.xml
+#    type: ehcache
