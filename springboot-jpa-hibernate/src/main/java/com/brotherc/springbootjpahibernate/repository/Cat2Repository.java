@@ -1,5 +1,7 @@
 package com.brotherc.springbootjpahibernate.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
@@ -22,4 +24,6 @@ public interface Cat2Repository extends PagingAndSortingRepository<Cat, Integer>
 	 */
 	@Query("from Cat where catName=:cn")
 	public Cat findByCatName2(@Param("cn") String catName);
+
+    Page<Cat> findByCatName(String catName, Pageable pageable);
 }

@@ -4,6 +4,10 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.brotherc.springbootjpahibernate.entity.Cat;
@@ -60,5 +64,13 @@ public class CatService {
 
     public Cat findByCatName2(String catName){
         return cat2Repository.findByCatName(catName);
+    }
+
+    public void queryForPage(String name) {
+        Pageable pageable = new PageRequest(0, 20, new Sort(new
+                Sort.Order(Sort.Direction.DESC, "id")));
+        Page<Cat> result =
+                cat2Repository.findByCatName(name, pageable);
+        System.out.println(result.getContent());
     }
 }
