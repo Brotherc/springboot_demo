@@ -1,5 +1,6 @@
 package com.brotherc.springbootehcache.entity;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cat {
+public class Cat implements Serializable {
+    private static final long serialVersionUID = 1L;
 	/**
 	 * 使用@Id指定主键.
 	 * 
