@@ -16,7 +16,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
-  cache:
-    ehcache:
-      config: classpath:config/ehcache.xml
+        enable_lazy_load_no_trans: true
+#  cache:
+#    ehcache:
+#      config: classpath:config/ehcache.xml
 #    type: ehcache
+  redis:
+    host: 192.168.174.145
+    port: 6379
+  cache:
+    type: redis
