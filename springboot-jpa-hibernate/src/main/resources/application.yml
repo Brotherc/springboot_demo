@@ -8,6 +8,7 @@ spring:
     min-idle: 8
     initial-size: 10
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
   jpa:
     database: mysql
     show-sql: true
