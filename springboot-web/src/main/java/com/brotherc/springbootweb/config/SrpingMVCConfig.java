@@ -9,7 +9,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
@@ -20,7 +20,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
  * @date: 2019/7/14 16:37
  */
 @Configuration //申明这是一个配置
-public class SrpingMVCConfig extends WebMvcConfigurerAdapter {
+public class SrpingMVCConfig implements WebMvcConfigurer {
 
     // 自定义拦截器
     @Override
