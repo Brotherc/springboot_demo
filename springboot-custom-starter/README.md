@@ -1,14 +1,10 @@
-# Getting Started
+![常见起步依赖](image/常见起步依赖.jpg)
+![起步依赖举例1](image/起步依赖举例1.jpg)
+![起步依赖举例2](image/起步依赖举例2.jpg)
 
-### Reference Documentation
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-
+![自动配置](image/自动配置.jpg)
+```
+@SpringBootApplication包含@EnableAutoConfiguration
+在执行过程中，对@EnableAutoConfiguration反射处理的过程中，它借助SpringFactoriesLoader对
+classpath:/META-INF/spring.factories配置进行加载
+```
